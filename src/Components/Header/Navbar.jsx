@@ -13,10 +13,10 @@ const Navbar = () => {
     </>
 
     //dark mode
-    const darkMode = () => {
-        const element = document.body;
-        element.classList.toggle("dark-mode");
-    }
+    // const darkMode = () => {
+    //     const element = document.body;
+    //     element.classList.toggle("dark-mode");
+    // }
 
     const handleSignout = () => {
         userSignOut()
@@ -68,7 +68,6 @@ const Navbar = () => {
                     </div>
                 </> : <>
                     <Link to='/login'> <button className='btn mr-4'>Login</button></Link>
-                    {/* <Link to='/register'> <button className='btn mr-4'>Register</button></Link> */}
                 </>}
 
                 {/* dark mode button */}
