@@ -1,15 +1,34 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../../Contexts/AuthContext';
 
 const Navbar = () => {
+    const { user, userSignOut } = use(AuthContext)
     const links = <>
         <li className='font-bold'><NavLink to='/'>Home</NavLink></li>
         <li className='font-bold'><NavLink to='availableCars'>Available Cars</NavLink></li>
-        <li className='font-bold'><NavLink to='/'>Add Car</NavLink></li>
-        <li className='font-bold'><NavLink to='/'>My Cars</NavLink></li>
-        <li className='font-bold'><NavLink to='/'>My Bookings</NavLink></li>
-
+        <li className='font-bold'><NavLink to='addCar'>Add Car</NavLink></li>
+        <li className='font-bold'><NavLink to='myCars'>My Cars</NavLink></li>
+        <li className='font-bold'><NavLink to='myBookings'>My Bookings</NavLink></li>
     </>
+
+    //dark mode
+    const darkMode = () => {
+        const element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+
+    const handleSignout = () => {
+        userSignOut()
+            .then(() => {
+                //console.log('Signout Successful');
+
+            })
+            .then(error => {
+                //console.log(error);
+                return (error.message);
+            })
+    }
     return (
         <div className="navbar bg-base-100 text-black shadow-sm px-5 mx-auto">
             <div className="navbar-start">
@@ -21,7 +40,10 @@ const Navbar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         {
-                            links
+                            user ? <>{links}</> : <>
+                                <li className='font-bold'><NavLink to='/'>Home</NavLink></li>
+                                <li className='font-bold'><NavLink to='availableCars'>Available Cars</NavLink></li>
+                            </>
                         }
                     </ul>
                 </div>
@@ -30,21 +52,25 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {
-                        links
+                        user ? <>{links}</> : <>
+                            <li className='font-bold'><NavLink to='/'>Home</NavLink></li>
+                            <li className='font-bold'><NavLink to='availableCars'>Available Cars</NavLink></li>
+                        </>
                     }
+
                 </ul>
             </div>
 
             <div className="navbar-end">
-                {/* {user ? <>
+                {user ? <>
                     <div className='flex items-center gap-4'>
-                        <a className="btn mr-4">Logout</a>
+                        <a onClick={handleSignout} className="btn mr-4">Logout</a>
                     </div>
                 </> : <>
                     <Link to='/login'> <button className='btn mr-4'>Login</button></Link>
-                    <Link to='/register'> <button className='btn mr-4'>Register</button></Link>
-                </>} */}
-                <Link to='/login'> <button className='btn font-bold mr-4'>Log-in</button></Link>
+                    {/* <Link to='/register'> <button className='btn mr-4'>Register</button></Link> */}
+                </>}
+
                 {/* dark mode button */}
                 {/* <button onClick={darkMode} className='btn'>Dark/Light</button> */}
 
