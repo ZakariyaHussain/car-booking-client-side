@@ -57,7 +57,6 @@ const Navbar = () => {
                             <li className='font-bold'><NavLink to='availableCars'>Available Cars</NavLink></li>
                         </>
                     }
-
                 </ul>
             </div>
 
