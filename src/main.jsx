@@ -16,12 +16,14 @@ import MyCars from './Components/Pages/MyCars';
 import MyBookings from './Components/Pages/MyBookings';
 import Login from './Components/Pages/Login';
 import Register from './Components/Pages/Register';
+import Error from './Components/Pages/Error';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayout,
+    errorElement: <Error></Error>,
     children: [
       {
         index: true,
