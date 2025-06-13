@@ -9,7 +9,7 @@ const RecentCars = () => {
             {/* Cards */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {/* card 1 */}
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card bg-base-100 shadow-sm">
                     <figure>
                         <img
                             src="https://i.ibb.co/QvJ4z3tt/Lamborghini.jpg"
@@ -26,7 +26,7 @@ const RecentCars = () => {
                     </div>
                 </div>
                 {/* card 2 */}
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card bg-base-100 shadow-sm">
                     <figure>
                         <img
                             src="https://i.ibb.co/QvJ4z3tt/Lamborghini.jpg"
@@ -43,7 +43,7 @@ const RecentCars = () => {
                     </div>
                 </div>
                 {/* card 3 */}
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card bg-base-100 shadow-sm">
                     <figure>
                         <img
                             src="https://i.ibb.co/QvJ4z3tt/Lamborghini.jpg"
@@ -60,7 +60,7 @@ const RecentCars = () => {
                     </div>
                 </div>
                 {/* card 4 */}
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card bg-base-100 shadow-sm">
                     <figure>
                         <img
                             src="https://i.ibb.co/QvJ4z3tt/Lamborghini.jpg"
@@ -77,7 +77,7 @@ const RecentCars = () => {
                     </div>
                 </div>
                 {/* card 5 */}
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card bg-base-100 shadow-sm">
                     <figure>
                         <img
                             src="https://i.ibb.co/QvJ4z3tt/Lamborghini.jpg"
@@ -94,7 +94,7 @@ const RecentCars = () => {
                     </div>
                 </div>
                 {/* card 6 */}
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card bg-base-100 shadow-sm">
                     <figure>
                         <img
                             src="https://i.ibb.co/QvJ4z3tt/Lamborghini.jpg"
