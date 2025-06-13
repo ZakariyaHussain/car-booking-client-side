@@ -12,16 +12,14 @@ const WhyChooseUs = () => {
             </div>
             {/* Cards */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-                <div className="card bg-amber-100 shadow-lg">
+                {/* Card 1 */}
+                <div className="card bg-amber-100 shadow-lg p-6">
                     <figure className="w-[100px] h-[100px] bg-base-100 rounded-full p-1 mx-auto">
                         <IoIosCar size={45} />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Wide Variety of Cars</h2>
                         <p>From budget-friendly options to luxury vehicles.</p>
-                        <div className="card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div>
                     </div>
                 </div>
                 {/* Card 2 */}
