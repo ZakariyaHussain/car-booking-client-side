@@ -17,6 +17,7 @@ import MyBookings from './Components/Pages/MyBookings';
 import Login from './Components/Pages/Login';
 import Register from './Components/Pages/Register';
 import Error from './Components/Pages/Error';
+import axios from 'axios';
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        loader: () => axios('http://localhost:3000/cars'),
         Component: Home
       },
       {
