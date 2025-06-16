@@ -19,40 +19,39 @@ const Update = () => {
             //console.log(carsData);
     
             //send car data to the db using normal fetch
-            fetch(`http://localhost:3000/add_car/${_id}`, {
-                method: 'POST',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(carsData),
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log('after adding car data to the db', data);
-            Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "New plant added successfully",
-                showConfirmButton: false,
-                timer: 1500
-            });
-                })
+            // fetch(`http://localhost:3000/car/${_id}`, {
+            //     method: 'PUT',
+            //     headers: {
+            //         'content-type': 'application/json'
+            //     },
+            //     body: JSON.stringify(carsData),
+            // })
+            //     .then(res => res.json())
+            //     .then(data => {
+            //         console.log('after adding car data to the db', data);
+            // Swal.fire({
+            //     icon: "success",
+            //     title: "Update successfully",
+            //     showConfirmButton: false,
+            //     timer: 1500
+            // });
+            //     })
     
             //send car data to the db using axios
-            // axios.post(`http://localhost:3000/add_cars/${_id}`, carsData)
-            //     .then(data => {
-            //         console.log(data);
-            //         Swal.fire({
-            //             icon: "success",
-            //             title: "Update Success",
-            //             showConfirmButton: false,
-            //             timer: 1500
-            //         });
+            axios.put(`http://localhost:3000/car/${_id}`, carsData)
+                .then(data => {
+                    console.log(data);
+                    Swal.fire({
+                        icon: "success",
+                        title: "Update Success",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
     
-            //     })
-            //     .catch(error => {
-            //         console.log(error);
-            //     })
+                })
+                .catch(error => {
+                    console.log(error);
+                })
         }
     return (
         <div className='p-25'>

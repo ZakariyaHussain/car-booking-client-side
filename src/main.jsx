@@ -52,8 +52,8 @@ const router = createBrowserRouter([
         element: <PrivateRoute><MyBookings></MyBookings></PrivateRoute>
       },
       {
-        path: "update/:id",
-        loader: ({params}) => axios(`http://localhost:3000/cars/${params.id}`),
+        path: "/update/:id",
+        loader: ({params}) => fetch(`http://localhost:3000/car/${params.id}`),
         Component: Update
       },
       {

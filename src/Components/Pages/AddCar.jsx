@@ -38,7 +38,7 @@ const AddCar = () => {
         //     })
 
         //send car data to the db using axios
-        axios.post('http://localhost:3000/add_car', carsData)
+        axios.post('http://localhost:3000/add-car', carsData)
             .then(data => {
                 console.log(data);
                 Swal.fire({

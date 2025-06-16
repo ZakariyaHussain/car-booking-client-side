@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 
 const MyCarsCard = ({ car }) => {
     const { _id, carModel, rentalPrice, availability, datePosted, bookingCount, photo } = car;
-    //const [cars, setCars] = useState();
+    const [cars, setCars] = useState();
     //handle delete button
     const handleDelete = (_id) => {
         //console.log(_id);
