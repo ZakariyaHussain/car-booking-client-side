@@ -18,6 +18,8 @@ import Login from './Components/Pages/Login';
 import Register from './Components/Pages/Register';
 import Error from './Components/Pages/Error';
 import axios from 'axios';
+import Update from './Components/Update';
+import CarDetails from './Components/carDetails';
 
 
 const router = createBrowserRouter([
@@ -33,6 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/availableCars',
+        loader: () => axios('http://localhost:3000/cars'),
         Component: AvailableCars
       },
       {
@@ -40,12 +43,23 @@ const router = createBrowserRouter([
         element: <PrivateRoute><AddCar></AddCar></PrivateRoute>
       },
       {
-        path: '/myCars',
+        path: '/myCars/:email',
+        loader: ({params}) => axios(`http://localhost:3000/my-cars/${params.email}`),
         element: <PrivateRoute><MyCars></MyCars></PrivateRoute>
       },
       {
         path: '/myBookings',
         element: <PrivateRoute><MyBookings></MyBookings></PrivateRoute>
+      },
+      {
+        path: "update/:id",
+        loader: ({params}) => axios(`http://localhost:3000/cars/${params.id}`),
+        Component: Update
+      },
+      {
+        path: "carDetails/:id",
+        loader: ({params}) => axios(`http://localhost:3000/car/${params.id}`),
+        Component: CarDetails,
       },
       {
         path: '/login',

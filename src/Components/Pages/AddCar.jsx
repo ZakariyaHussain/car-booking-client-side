@@ -17,7 +17,7 @@ const AddCar = () => {
         console.log(formData.entries());
         //console.log(carsData);
 
-        //send car data to the db
+        //send car data to the db using normal fetch
         // fetch('http://localhost:3000/add_car', {
         //     method: 'POST',
         //     headers: {

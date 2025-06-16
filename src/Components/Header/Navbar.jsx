@@ -8,7 +8,7 @@ const Navbar = () => {
         <li className='font-bold'><NavLink to='/'>Home</NavLink></li>
         <li className='font-bold'><NavLink to='availableCars'>Available Cars</NavLink></li>
         <li className='font-bold'><NavLink to='addCar'>Add Car</NavLink></li>
-        <li className='font-bold'><NavLink to='myCars'>My Cars</NavLink></li>
+        <li className='font-bold'><NavLink to={`myCars/${user?.email}`}>My Cars</NavLink></li>
         <li className='font-bold'><NavLink to='myBookings'>My Bookings</NavLink></li>
     </>
 

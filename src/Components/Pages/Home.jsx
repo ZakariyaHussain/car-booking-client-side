@@ -8,8 +8,6 @@ import { useLoaderData } from 'react-router';
 
 const Home = () => {
     const cars = useLoaderData();
-    //const [cars, setCars] = 
-    //console.log(recentCars);
     return (
         <div>
             <Banner></Banner>
@@ -21,7 +19,6 @@ const Home = () => {
                 </div>
                 {/* Cards */}
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    {/* card 1 */}
                     {
                         cars.data.map(car => <RecentCars key={car._id} car={car}></RecentCars>)
                     }
