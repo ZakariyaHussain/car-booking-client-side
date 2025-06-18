@@ -19,7 +19,7 @@ const Update = () => {
             //console.log(carsData);
     
             //send car data to the db using normal fetch
-            // fetch(`http://localhost:3000/car/${_id}`, {
+            // fetch(`https://car-booking-server.vercel.app/car/${_id}`, {
             //     method: 'PUT',
             //     headers: {
             //         'content-type': 'application/json'
@@ -38,7 +38,7 @@ const Update = () => {
             //     })
     
             //send car data to the db using axios
-            axios.put(`http://localhost:3000/car/${_id}`, carsData)
+            axios.put(`https://car-booking-server.vercel.app/car/${_id}`, carsData)
                 .then(data => {
                     console.log(data);
                     Swal.fire({

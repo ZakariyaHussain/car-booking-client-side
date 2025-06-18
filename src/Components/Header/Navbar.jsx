@@ -47,6 +47,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
+                <img className='w-[150px] h-[50px]' src="logo.jpg" alt="" />
                 <a className="btn btn-ghost text-xl">Ride<span className='text-green-400'>Hub</span></a>
             </div>
             <div className="navbar-center hidden lg:flex">

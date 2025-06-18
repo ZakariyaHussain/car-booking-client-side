@@ -1,12 +1,32 @@
-import React from 'react';
+import axios from 'axios';
+import React, { use, useState } from 'react';
 import { useLoaderData } from 'react-router';
+import { AuthContext } from '../Contexts/AuthContext';
 
 const CarDetails = () => {
-
+    const { user } = use(AuthContext);
     const carData = useLoaderData();
     const car = carData.data;
-    console.log(car);
-    const { _id, carModel, features, description, rentalPrice, availability, photo } = car || {};
+    const [bookingCar, setBookingCar] = useState(car);
+    console.log(bookingCar);
+    const { _id, carModel, features, description, rentalPrice, availability, bookingCount, photo, email } = bookingCar || {};
+
+    //handle booking
+    const handleBookNowButton = () => {
+        if(user?.email === email)
+            return alert('It yourself car')
+        const bookingInfo = {
+            carId: _id,
+            customerEmail: user?.email,
+        }
+        axios.post(`https://car-booking-server.vercel.app/booking-car/${_id}`, bookingInfo )
+        .then(data => {
+            console.log(data);
+            setBookingCar(prev =>{
+                return {...prev, bookingCount: prev.bookingCount - 1 }
+            })
+        })
+    }
 
     return (
         <div className='px-5 my-20 mx-auto'>
@@ -28,12 +48,13 @@ const CarDetails = () => {
                         <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Features:</span> {features}</h3>
                         <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Rental Price:</span> {rentalPrice}</h3>
                         <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Availability: </span>{availability}</h3>
+                        <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Booking Count: </span>{bookingCount}</h3>
                     </div>
 
                 </div>
             </div>
             <div className='mt-8'>
-                <button onClick={() => handleBookNowButton(_id)} className="btn btn-primary w-full hover:touch-pinch-zoom">Book Now</button>
+                <button onClick={handleBookNowButton} className="btn btn-primary w-full hover:touch-pinch-zoom">Book Now</button>
             </div>
         </div>
     );

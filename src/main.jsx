@@ -30,12 +30,12 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => axios('http://localhost:3000/cars'),
+        loader: () => axios('https://car-booking-server.vercel.app/cars'),
         Component: Home
       },
       {
         path: '/availableCars',
-        loader: () => axios('http://localhost:3000/cars'),
+        loader: () => axios('https://car-booking-server.vercel.app/cars'),
         Component: AvailableCars
       },
       {
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/myCars/:email',
-        loader: ({params}) => axios(`http://localhost:3000/my-cars/${params.email}`),
+        loader: ({params}) => axios(`https://car-booking-server.vercel.app/my-cars/${params.email}`),
         element: <PrivateRoute><MyCars></MyCars></PrivateRoute>
       },
       {
@@ -53,12 +53,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/update/:id",
-        loader: ({params}) => fetch(`http://localhost:3000/car/${params.id}`),
-        Component: Update
+        loader: ({params}) => fetch(`https://car-booking-server.vercel.app/car/${params.id}`),
+        element: <PrivateRoute><Update></Update></PrivateRoute>
       },
       {
         path: "carDetails/:id",
-        loader: ({params}) => axios(`http://localhost:3000/car/${params.id}`),
+        loader: ({params}) => axios(`https://car-booking-server.vercel.app/car/${params.id}`),
         Component: CarDetails,
       },
       {
