@@ -128,7 +128,7 @@ const Update = () => {
                     </fieldset>
                 </div>
                 <div>
-                    <button className='btn btn-primary w-full mt-8'>Update Now</button>
+                    <button className='btn bg-green-400 text-white w-full mt-8'>Update Now</button>
                 </div>
 
             </form>

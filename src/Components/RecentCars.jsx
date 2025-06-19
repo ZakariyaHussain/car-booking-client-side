@@ -18,7 +18,7 @@ const RecentCars = ({ car }) => {
                 <p className='text-lg font-bold'>Date Posted: <span className='font-normal'>{datePosted}</span></p>
                 <p className='text-lg font-bold'>Booking Count: <span className='font-normal'>{bookingCount}</span></p>
                 <div className="card-actions">
-                    <button className="btn btn-primary hover:touch-pinch-zoom">Book Now</button>
+                    <button className="btn bg-green-400 text-white hover:touch-pinch-zoom">Book Now</button>
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@ const Testimonials = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {/* card 1 */}
-                <div className="card bg-amber-100 shadow-lg p-6">
+                <div className="card bg-[#d0f7e2] shadow-lg p-6">
                     <figure className="w-[100px] h-[100px] bg-base-100 rounded-full mx-auto">
                         <img src="https://i.ibb.co/n85BRBRQ/testimonial-1.jpg" alt="" />
                     </figure>
@@ -21,7 +21,7 @@ const Testimonials = () => {
                     </div>
                 </div>
                 {/* card 2 */}
-                <div className="card bg-amber-100 shadow-lg p-6">
+                <div className="card bg-[#d0f7e2] shadow-lg p-6">
                     <figure className="w-[100px] h-[100px] bg-base-100 rounded-full mx-auto">
                         <img src="https://i.ibb.co/W4b1GdTQ/testimonial-2.jpg" alt="" />
                     </figure>
@@ -31,7 +31,7 @@ const Testimonials = () => {
                     </div>
                 </div>
                 {/* card 3 */}
-                <div className="card bg-amber-100 shadow-lg p-6">
+                <div className="card bg-[#d0f7e2] shadow-lg p-6">
                     <figure className="w-[100px] h-[100px] bg-base-100 rounded-full mx-auto">
                         <img src="https://i.ibb.co/bRzv2Nfw/testimonial-3.jpg" alt="" />
                     </figure>

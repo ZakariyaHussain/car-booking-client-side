@@ -128,7 +128,7 @@ const AddCar = () => {
                     </fieldset>
                 </div>
                 <div>
-                    <button className='btn btn-primary w-full mt-8'>Add Car</button>
+                    <button className='btn bg-green-400 text-white w-full mt-8'>Add Car</button>
                 </div>
 
             </form>

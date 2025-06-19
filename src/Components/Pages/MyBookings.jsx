@@ -2,10 +2,12 @@ import axios from 'axios';
 import React, { use, useEffect, useState } from 'react';
 import { AuthContext } from '../../Contexts/AuthContext';
 import BookingCard from '../BookingCard';
+import Swal from 'sweetalert2';
 
 const MyBookings = () => {
     const { user } = use(AuthContext);
     const [myBooking, setMyBooking] = useState([]);
+
     useEffect(() => {
         axios(`https://car-booking-server.vercel.app/booking-cars/${user?.email}`)
             .then(data => {
@@ -17,7 +19,7 @@ const MyBookings = () => {
     }, [user]);
 
     return (
-        <div className="overflow-x-auto rounded-box border border-base-content/5 px-5 my-20">
+        <div className="overflow-x-auto min-h-[100vh] rounded-box border border-base-content/5 px-5 my-20">
             <table className="table">
                 {/* head */}
                 <thead>
@@ -31,9 +33,10 @@ const MyBookings = () => {
                     </tr>
                 </thead>
                 <tbody>
+                    
                     {/* row  */}
                     {
-                        myBooking.map(car => <BookingCard key={car._id} car={car}></BookingCard>)
+                        myBooking.map(car => <BookingCard key={car._id} car={car}></BookingCard> )
                     }
 
                 </tbody>

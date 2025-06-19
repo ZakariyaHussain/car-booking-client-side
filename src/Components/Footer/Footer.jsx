@@ -5,6 +5,7 @@ const Footer = () => {
     return (
         <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4 mt-16">
             <aside className="grid-flow-col items-center">
+                <img className='w-[150px] h-[50px]' src="logo.jpg" alt="" />
                 <a className="btn btn-ghost text-xl">Ride<span className='text-green-400'>Hub</span></a>
             </aside>
             <div className='flex'>

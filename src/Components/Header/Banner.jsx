@@ -14,7 +14,7 @@ const Banner = () => {
             <div className="hero-content text-neutral-content text-center">
                 <div className="">
                     <h1 className="mb-5 text-5xl font-bold shadow-2xl">Your Next Car Awaits You.</h1>
-                    <Link to='availableCars'><button className="btn btn-primary">View Available Cars</button></Link>
+                    <Link to='availableCars'><button className="btn bg-green-400 text-white">View Available Cars</button></Link>
                 </div>
             </div>
         </div>

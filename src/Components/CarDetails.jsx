@@ -8,8 +8,8 @@ const CarDetails = () => {
     const carData = useLoaderData();
     const car = carData.data;
     const [bookingCar, setBookingCar] = useState(car);
-    console.log(bookingCar);
     const { _id, carModel, features, description, rentalPrice, availability, bookingCount, photo, email } = bookingCar || {};
+
 
     //handle booking
     const handleBookNowButton = () => {
@@ -19,6 +19,7 @@ const CarDetails = () => {
             carId: _id,
             customerEmail: user?.email,
         }
+        //
         axios.post(`https://car-booking-server.vercel.app/booking-car/${_id}`, bookingInfo )
         .then(data => {
             console.log(data);
@@ -54,7 +55,7 @@ const CarDetails = () => {
                 </div>
             </div>
             <div className='mt-8'>
-                <button onClick={handleBookNowButton} className="btn btn-primary w-full hover:touch-pinch-zoom">Book Now</button>
+                <button onClick={handleBookNowButton} className="btn bg-green-400 text-white w-full hover:touch-pinch-zoom">Book Now</button>
             </div>
         </div>
     );

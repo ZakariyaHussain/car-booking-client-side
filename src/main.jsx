@@ -48,7 +48,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute><MyCars></MyCars></PrivateRoute>
       },
       {
-        path: '/myBookings',
+        path: '/myBookings/:email',
         element: <PrivateRoute><MyBookings></MyBookings></PrivateRoute>
       },
       {

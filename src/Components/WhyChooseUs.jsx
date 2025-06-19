@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
             {/* Cards */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
                 {/* Card 1 */}
-                <div className="card bg-amber-100 shadow-lg p-6">
+                <div className="card bg-[#d0f7e2] shadow-lg p-6">
                     <figure className="w-[100px] h-[100px] bg-base-100 rounded-full p-1 mx-auto">
                         <IoIosCar size={45} />
                     </figure>
@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
                     </div>
                 </div>
                 {/* Card 2 */}
-                <div className="card bg-amber-100 shadow-lg p-6">
+                <div className="card bg-[#d0f7e2] shadow-lg p-6">
                     <figure className="w-[100px] h-[100px] bg-base-100 rounded-full p-1 mx-auto">
                         <MdOutlinePriceCheck size={45} />
                     </figure>
@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
                     </div>
                 </div>
                 {/* Card 3 */}
-                <div className="card bg-amber-100 shadow-lg p-6">
+                <div className="card bg-[#d0f7e2] shadow-lg p-6">
                     <figure className="w-[100px] h-[100px] bg-base-100 rounded-full p-1 mx-auto">
                         <TbBrandBooking size={45} />
                     </figure>
@@ -45,8 +45,7 @@ const WhyChooseUs = () => {
                     </div>
                 </div>
                 {/* Card 4 */}
-                <div className="card bg-amber-100
-             shadow-lg p-6">
+                <div className="card bg-[#d0f7e2] shadow-lg p-6">
                     <figure className="w-[100px] h-[100px] bg-base-100 rounded-full p-1 mx-auto">
                         <FcCustomerSupport size={45} />
                     </figure>

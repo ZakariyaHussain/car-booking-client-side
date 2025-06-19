@@ -30,7 +30,7 @@ const MyCars = () => {
                     </tbody>
                 </table> : <div>
                     <h2 className='text-center text-2xl font-bold'>Please add a car</h2>
-                    <Link to='/addCar'><button className='btn btn-primary w-full mt-8'>Add Car</button></Link>
+                    <Link to='/addCar'><button className='btn bg-green-400 text-white w-full mt-8'>Add Car</button></Link>
                 </div>
             }
         </div>

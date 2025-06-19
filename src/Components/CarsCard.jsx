@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const CarsCard = ({ car }) => {
-    const { _id, carModel, features, description, rentalPrice, availability, registrationNumber, datePosted, bookingCount, photo } = car;
+    const { _id, carModel, description, photo } = car;
 
     //handle delete button
         // const handleBookNowButton = (_id) => {
@@ -41,7 +41,7 @@ const CarsCard = ({ car }) => {
         //     });
         // }
     return (
-        <div className="card bg-amber-100 shadow-lg p-6">
+        <div className="card bg-[#d0f7e2] shadow-lg p-6">
             <figure>
                 <img
                     src={photo}
@@ -50,8 +50,8 @@ const CarsCard = ({ car }) => {
             <div className="card-body items-center text-center">
                 <h2 className="card-title">{carModel}</h2>
                 <p>{description}</p>
-            <Link to={`/carDetails/${_id}`}><button className="btn btn-primary hover:touch-pinch-zoom">Book Now</button></Link>
-            {/* <button onClick={()=>handleBookNowButton(_id)} className="btn btn-primary hover:touch-pinch-zoom">Book Now</button> */}
+            <Link to={`/carDetails/${_id}`}><button className="btn bg-green-400 text-white hover:touch-pinch-zoom">Book Now</button></Link>
+            {/* <button onClick={()=>handleBookNowButton(_id)} className="btn bg-green-400 text-white hover:touch-pinch-zoom">Book Now</button> */}
             </div>
         </div>
     );
