@@ -13,7 +13,7 @@ const RecentCars = ({ car }) => {
             </figure>
             <div className="card-body">
                 <p className="text-lg font-bold">Model: <span className='font-normal'>{carModel}</span></p>
-                <p className="text-lg font-bold">Daily Price: <span className='font-normal'>{rentalPrice}</span></p>
+                <p className="text-lg font-bold">Daily Price: <span className='font-normal'>${rentalPrice}/day</span></p>
                 <p className='text-lg font-bold'>Availability: <span className='font-normal'>{availability}</span></p>
                 <p className='text-lg font-bold'>Date Posted: <span className='font-normal'>{datePosted}</span></p>
                 <p className='text-lg font-bold'>Booking Count: <span className='font-normal'>{bookingCount}</span></p>

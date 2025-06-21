@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { use, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { AuthContext } from '../Contexts/AuthContext';
+import Swal from 'sweetalert2';
 
 const CarDetails = () => {
     const { user } = use(AuthContext);
@@ -13,20 +14,46 @@ const CarDetails = () => {
 
     //handle booking
     const handleBookNowButton = () => {
-        if(user?.email === email)
+        if (user?.email === email)
             return alert('It yourself car')
         const bookingInfo = {
             carId: _id,
-            customerEmail: user?.email,
+            customerEmail: user?.email
+            // add message after submit assignment
+                // Swal.fire({
+                //     title: "Are you sure, are you want to book now?",
+                //     text: {carModel},
+                //     icon: "warning",
+                //     showCancelButton: true,
+                //     confirmButtonColor: "#3085d6",
+                //     cancelButtonColor: "#d33",
+                //     confirmButtonText: "Yes, Book Now!"
+                // })
         }
         //
-        axios.post(`https://car-booking-server.vercel.app/booking-car/${_id}`, bookingInfo )
-        .then(data => {
-            console.log(data);
-            setBookingCar(prev =>{
-                return {...prev, bookingCount: prev.bookingCount - 1 }
+        axios.post(`https://car-booking-server.vercel.app/booking-car/${_id}`, bookingInfo)
+            .then(data => {
+                // const carModel = res.data.carModel;
+                console.log(data);
+                Swal.fire({
+                    title: "Are you sure, are you want to book now?",
+                    html: `<div className='space-y-2'>
+                        <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Car Model:</span> ${carModel}</h3>
+                        <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Features:</span> ${features}</h3>
+                        <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Rental Price:</span> ${rentalPrice}</h3>
+                        <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Availability: </span>${availability}</h3>
+                        <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Booking Count: </span>${bookingCount}</h3>
+                    </div>`,
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Book Now"
+                })
+                setBookingCar(prev => {
+                    return { ...prev, bookingCount: prev.bookingCount - 1 }
+                })
+                
             })
-        })
     }
 
     return (

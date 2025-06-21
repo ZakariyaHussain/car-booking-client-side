@@ -43,12 +43,13 @@ const MyCarsCard = ({ car }) => {
     }
     return (
         <tr>
+            {/* serial edit after submit assignment */}
             <td><img className='max-w-[150px]' src={photo} alt="" /></td>
             <td>{carModel}</td>
-            <td>{rentalPrice}</td>
+            <td>${rentalPrice}/day</td>
+            <td>{bookingCount}</td>
             <td>{availability}</td>
             <td>{datePosted}</td>
-            <td>{bookingCount}</td>
             <td><Link to={`/update/${_id}`}><button className="btn bg-green-500 text-white">Update</button></Link></td>
             <td><button onClick={()=>handleDelete(_id)} className="btn bg-green-500 text-white">Delete</button></td>
         </tr>
