@@ -85,12 +85,12 @@ const AddCar = () => {
                     <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
                         <label className="label">Daily Rental Price</label>
                         <select className=' bg-base-100 border border-base-300 rounded p-2' name="rentalPrice">
-                            <option value="$110/day">Tesla-$110/day</option>
-                            <option value="$150/day">Range Rover-$150/day</option>
-                            <option value="$350/day">Lamborghini-$350/day</option>
-                            <option value="$120/day">BMW 3 Series-$120/day</option>
-                            <option value="$130/day">Mercedes C-Class-$130/day</option>
-                            <option value="$45/day">Toyota Corolla-$45/day</option>
+                            <option value="110">Tesla-$110/day</option>
+                            <option value="150">Range Rover-$150/day</option>
+                            <option value="350">Lamborghini-$350/day</option>
+                            <option value="120">BMW 3 Series-$120/day</option>
+                            <option value="130">Mercedes C-Class-$130/day</option>
+                            <option value="45">Toyota Corolla-$45/day</option>
                         </select>
                     </fieldset>
 
@@ -119,7 +119,7 @@ const AddCar = () => {
 
                     <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
                         <label className="label">Date Posted</label>
-                        <input type="text" name='datePosted' className="input w-full" placeholder="Enter Date Posted" />
+                        <input type="date" name='datePosted' className="input w-full" placeholder="Enter Date Posted" />
                     </fieldset>
 
                     <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">

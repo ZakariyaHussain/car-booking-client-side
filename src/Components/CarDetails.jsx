@@ -19,16 +19,6 @@ const CarDetails = () => {
         const bookingInfo = {
             carId: _id,
             customerEmail: user?.email
-            // add message after submit assignment
-                // Swal.fire({
-                //     title: "Are you sure, are you want to book now?",
-                //     text: {carModel},
-                //     icon: "warning",
-                //     showCancelButton: true,
-                //     confirmButtonColor: "#3085d6",
-                //     cancelButtonColor: "#d33",
-                //     confirmButtonText: "Yes, Book Now!"
-                // })
         }
         //
         axios.post(`https://car-booking-server.vercel.app/booking-car/${_id}`, bookingInfo)
@@ -40,7 +30,7 @@ const CarDetails = () => {
                     html: `<div className='space-y-2'>
                         <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Car Model:</span> ${carModel}</h3>
                         <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Features:</span> ${features}</h3>
-                        <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Rental Price:</span> ${rentalPrice}</h3>
+                        <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Rental Price: $</span>${rentalPrice}/day</h3>
                         <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Availability: </span>${availability}</h3>
                         <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Booking Count: </span>${bookingCount}</h3>
                     </div>`,
@@ -74,7 +64,7 @@ const CarDetails = () => {
                     <div className='space-y-2'>
                         <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Car Model:</span> {carModel}</h3>
                         <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Features:</span> {features}</h3>
-                        <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Rental Price:</span> {rentalPrice}</h3>
+                        <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Rental Price:</span> ${rentalPrice}/day</h3>
                         <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Availability: </span>{availability}</h3>
                         <h3 className='text-2xl font-medium'><span className='font-bold text-green-500'>Booking Count: </span>{bookingCount}</h3>
                     </div>

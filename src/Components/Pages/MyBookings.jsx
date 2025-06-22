@@ -1,17 +1,17 @@
 import axios from 'axios';
-import React, { use, useEffect, useState } from 'react';
+import React, { use, useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Contexts/AuthContext';
 import BookingCard from '../BookingCard';
 import Swal from 'sweetalert2';
 
 const MyBookings = () => {
-    const { user } = use(AuthContext);
+    const { user } = useContext(AuthContext);
     const [myBooking, setMyBooking] = useState([]);
 
     useEffect(() => {
-        axios(`https://car-booking-server.vercel.app/booking-cars/${user?.email}`)
-            .then(data => {
-                setMyBooking(data?.data);
+        axios.get(`https://car-booking-server.vercel.app/booking-cars/${user?.email}`)
+            .then(res => {
+                setMyBooking(res?.data);
             })
             .catch(error => {
                 console.log(error);

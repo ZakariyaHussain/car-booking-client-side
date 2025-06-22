@@ -3,43 +3,8 @@ import { Link } from 'react-router';
 
 const CarsCard = ({ car }) => {
     const { _id, carModel, description, rentalPrice, photo } = car;
-    console.log(car);
-    //handle delete button
-        // const handleBookNowButton = (_id) => {
-        //     //console.log(_id);
-        //     Swal.fire({
-        //         title: "Are you sure Booking Now?",
-        //         text: "You won't be able to revert this!",
-        //         icon: "warning",
-        //         showCancelButton: true,
-        //         confirmButtonColor: "#3085d6",
-        //         cancelButtonColor: "#d33",
-        //         confirmButtonText: "Yes, delete it!"
-        //     }).then((result) => {
-        //         //console.log(result.isConfirmed);
-        //         if (result.isConfirmed) {
-        //             //start deleting
-        //             fetch(`https://car-booking-server.vercel.app/cars/${_id}`, {
-        //                 method: 'DELETE',
-        //             })
-        //                 .then(res => res.json())
-        //                 .then(data => {
-        //                     //console.log('after delete', data);
-        //                     if (data.deletedCount) {
-        //                         Swal.fire({
-        //                             title: "Deleted!",
-        //                             text: "Your select car has been deleted.",
-        //                             icon: "success"
-        //                         });
-    
-        //                         // remove delete plant from ui
-        //                         const remainingCars = cars.filter(deleteCar => deleteCar._id !== _id);
-        //                         setCars(remainingCars);
-        //                     }
-        //                 })
-        //         }
-        //     });
-        // }
+    //console.log(car);
+        
     return (
         <div className="card bg-[#d0f7e2] shadow-lg p-6">
             <figure>
@@ -52,7 +17,7 @@ const CarsCard = ({ car }) => {
                 <p>{description}</p>
                 <p>${rentalPrice}/day</p>
             <Link to={`/carDetails/${_id}`}><button className="btn bg-green-400 text-white hover:touch-pinch-zoom">Book Now</button></Link>
-            {/* <button onClick={()=>handleBookNowButton(_id)} className="btn bg-green-400 text-white hover:touch-pinch-zoom">Book Now</button> */}
+            
             </div>
         </div>
     );

@@ -35,7 +35,7 @@ const AvailableCars = () => {
                 <h1 className='text-[25px] font-bold'>Available Cars</h1>
                 <p>Enter details like model, rent rate, availability, and more to keep your listings updated and ready for booking.</p>
 
-                <div className='flex justify-center items-center gap-8 mt-6'>
+                <div className='sm:flex justify-center items-center gap-8 mt-6'>
                     {/* Toggle */}
                     <button
                         onClick={toggleView}
