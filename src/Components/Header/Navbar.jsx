@@ -31,7 +31,7 @@ const Navbar = () => {
             })
     }
     return (
-        <div className="navbar bg-base-100 text-black shadow-sm px-5 mx-auto">
+        <div className="navbar bg-neutral-900 text-white shadow-sm px-5 mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -68,7 +68,7 @@ const Navbar = () => {
                         <a onClick={handleSignout} className="btn mr-4">Logout</a>
                     </div>
                 </> : <>
-                    <Link to='/login'> <button className='btn mr-4'>Login</button></Link>
+                    <Link to='/login'> <button className='btn bg-green-500 hover:bg-green-600 mr-4'>Login</button></Link>
                 </>}
 
                 {/* dark mode button */}
