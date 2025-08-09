@@ -31,7 +31,7 @@ const Navbar = () => {
             })
     }
     return (
-        <div className="navbar bg-neutral-900 text-white shadow-sm px-5 mx-auto">
+        <div className="navbar bg-neutral-900 text-white shadow-sm px-5 fixed top-0 left-0 w-full z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,7 +39,7 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-neutral-900 text-white rounded-box z-1 mt-3 w-52 p-2 shadow">
                         {
                             user ? <>{links}</> : <>
                                 <li className='font-bold'><NavLink to='/'>Home</NavLink></li>
@@ -68,7 +68,7 @@ const Navbar = () => {
                         <a onClick={handleSignout} className="btn mr-4">Logout</a>
                     </div>
                 </> : <>
-                    <Link to='/login'> <button className='btn bg-green-500 hover:bg-green-600 mr-4'>Login</button></Link>
+                    <Link to='/login'> <button className='btn border-0 bg-green-500 hover:bg-green-600 mr-4'>Login</button></Link>
                 </>}
 
                 {/* dark mode button */}
