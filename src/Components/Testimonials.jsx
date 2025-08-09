@@ -3,45 +3,47 @@ import { IoIosCar } from 'react-icons/io';
 
 const Testimonials = () => {
     return (
-        <div className='px-6 mx-auto'>
-            <div className='mt-16 mb-10'>
-                <h5 className='font-bold text-center'>Testimonials</h5>
-                <h2 className='text-2xl font-bold text-center'>What They’re Talking
-                    About RideHub</h2>
+
+        <div className="px-6 mx-auto">
+            {/* Section Title */}
+            <div className="mt-16 mb-10 text-center">
+                <h5 className="font-semibold text-green-500 tracking-wider uppercase">Testimonials</h5>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+                    What They’re Talking About RideHub
+                </h2>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                {/* card 1 */}
-                <div className="card bg-[#d0f7e2] shadow-lg p-6">
-                    <figure className="w-[100px] h-[100px] bg-base-100 rounded-full mx-auto">
-                        <img src="https://i.ibb.co/n85BRBRQ/testimonial-1.jpg" alt="" />
+
+            {/* Testimonial Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Card 1 */}
+                <div className="bg-white shadow-lg rounded-2xl p-8 hover:shadow-2xl transition duration-300">
+                    <figure className="w-[100px] h-[100px] mx-auto mb-4 rounded-full border-4 border-green-400 overflow-hidden shadow-md">
+                        <img src="https://i.ibb.co/n85BRBRQ/testimonial-1.jpg" alt="Sarah M." className="w-full h-full object-cover" />
                     </figure>
-                    <div className="card-body items-center text-center">
-                        <p>"Smooth booking process and the car was in great condition. Will definitely rent again!"</p>
-                        <h2 className="card-title">Sarah M.</h2>
-                    </div>
+                    <p className="text-gray-600 italic mb-4">"Smooth booking process and the car was in great condition. Will definitely rent again!"</p>
+                    <h2 className="text-lg font-semibold text-gray-800">Sarah M.</h2>
                 </div>
-                {/* card 2 */}
-                <div className="card bg-[#d0f7e2] shadow-lg p-6">
-                    <figure className="w-[100px] h-[100px] bg-base-100 rounded-full mx-auto">
-                        <img src="https://i.ibb.co/W4b1GdTQ/testimonial-2.jpg" alt="" />
+
+                {/* Card 2 */}
+                <div className="bg-white shadow-lg rounded-2xl p-8 hover:shadow-2xl transition duration-300">
+                    <figure className="w-[100px] h-[100px] mx-auto mb-4 rounded-full border-4 border-green-400 overflow-hidden shadow-md">
+                        <img src="https://i.ibb.co/W4b1GdTQ/testimonial-2.jpg" alt="Priya K." className="w-full h-full object-cover" />
                     </figure>
-                    <div className="card-body items-center text-center">
-                        <p>"Very professional and punctual. The car looked exactly like the pictures."</p>
-                        <h2 className="card-title">Priya K.</h2>
-                    </div>
+                    <p className="text-gray-600 italic mb-4">"Very professional and punctual. The car looked exactly like the pictures."</p>
+                    <h2 className="text-lg font-semibold text-gray-800">Priya K.</h2>
                 </div>
-                {/* card 3 */}
-                <div className="card bg-[#d0f7e2] shadow-lg p-6">
-                    <figure className="w-[100px] h-[100px] bg-base-100 rounded-full mx-auto">
-                        <img src="https://i.ibb.co/bRzv2Nfw/testimonial-3.jpg" alt="" />
+
+                {/* Card 3 */}
+                <div className="bg-white shadow-lg rounded-2xl p-8 hover:shadow-2xl transition duration-300">
+                    <figure className="w-[100px] h-[100px] mx-auto mb-4 rounded-full border-4 border-green-400 overflow-hidden shadow-md">
+                        <img src="https://i.ibb.co/bRzv2Nfw/testimonial-3.jpg" alt="David L." className="w-full h-full object-cover" />
                     </figure>
-                    <div className="card-body items-center text-center">
-                        <p>"Rented a Lamborghini for the weekend — it was a dream ride! Highly recommend!"</p>
-                        <h2 className="card-title">David L.</h2>
-                    </div>
+                    <p className="text-gray-600 italic mb-4">"Rented a Lamborghini for the weekend — it was a dream ride! Highly recommend!"</p>
+                    <h2 className="text-lg font-semibold text-gray-800">David L.</h2>
                 </div>
             </div>
         </div>
+
     );
 };
 
