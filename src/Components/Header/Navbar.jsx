@@ -13,12 +13,6 @@ const Navbar = () => {
         <li className='font-bold'><NavLink to={`myBookings/${user?.email}`}>My Bookings</NavLink></li>
     </>
 
-    //dark mode
-    // const darkMode = () => {
-    //     const element = document.body;
-    //     element.classList.toggle("dark-mode");
-    // }
-
     const handleSignout = () => {
         userSignOut()
             .then(() => {
@@ -44,6 +38,7 @@ const Navbar = () => {
                             user ? <>{links}</> : <>
                                 <li className='font-bold'><NavLink to='/'>Home</NavLink></li>
                                 <li className='font-bold'><NavLink to='availableCars'>Available Cars</NavLink></li>
+                                <li className='font-bold'><NavLink to='addCar'>Add Car</NavLink></li>
                             </>
                         }
                     </ul>
@@ -57,6 +52,7 @@ const Navbar = () => {
                         user ? <>{links}</> : <>
                             <li className='font-bold'><NavLink to='/'>Home</NavLink></li>
                             <li className='font-bold'><NavLink to='availableCars'>Available Cars</NavLink></li>
+                            <li className='font-bold'><NavLink to='addCar'>Add Car</NavLink></li>
                         </>
                     }
                 </ul>
@@ -65,14 +61,11 @@ const Navbar = () => {
             <div className="navbar-end">
                 {user ? <>
                     <div className='flex items-center gap-4'>
-                        <a onClick={handleSignout} className="btn mr-4">Logout</a>
+                        <a onClick={handleSignout} className="btn border-0 bg-green-500 hover:bg-green-600 mr-4">Logout</a>
                     </div>
                 </> : <>
                     <Link to='/login'> <button className='btn border-0 bg-green-500 hover:bg-green-600 mr-4'>Login</button></Link>
                 </>}
-
-                {/* dark mode button */}
-                {/* <button onClick={darkMode} className='btn'>Dark/Light</button> */}
 
             </div>
         </div>
