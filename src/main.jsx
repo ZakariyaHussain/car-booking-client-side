@@ -19,7 +19,8 @@ import Register from './Components/Pages/Register';
 import Error from './Components/Pages/Error';
 import axios from 'axios';
 import Update from './Components/Update';
-import CarDetails from './Components/carDetails';
+import CarDetails from './Components/CarDetails';
+
 
 
 const router = createBrowserRouter([
@@ -60,6 +61,7 @@ const router = createBrowserRouter([
         path: "carDetails/:id",
         loader: ({params}) => axios(`https://car-booking-server.vercel.app/car/${params.id}`),
         Component: CarDetails,
+        // element: <PrivateRoute><CarDetails></CarDetails></PrivateRoute>
       },
       {
         path: '/login',

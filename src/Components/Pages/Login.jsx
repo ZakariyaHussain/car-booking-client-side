@@ -8,6 +8,7 @@ const Login = () => {
     const { userLogin, userGoogleLogin } = use(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     //user login
     const handleLoginForm = e => {
@@ -18,7 +19,8 @@ const Login = () => {
         userLogin(email, password)
             .then(result => {
                 //console.log('logged in success', result.user);
-                navigate(location?.state || '/');
+                //navigate(location?.state || '/');
+                navigate(from, { replace: true });
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
@@ -69,7 +71,7 @@ const Login = () => {
             })
     }
     return (
-        <div className="card bg-base-100 w-full max-w-sm mx-auto my-16 shrink-0 shadow-2xl">
+        <div className="card bg-base-100 w-full max-w-sm mx-auto my-25 shrink-0 shadow-2xl">
 
             <h1 className="text-center text-5xl font-bold">Login now!</h1>
             <div className="card-body">
