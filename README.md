@@ -1,19 +1,33 @@
-# React + Vite
+# 🚗 Car Booking Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **car rental booking** web application built with **React**, **Tailwind CSS**, **Firebase**, and **MongoDB**.  
+This project includes **full-stack functionality** — users can browse cars, make bookings, and manage their reservations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🚘 **Car Listings** – View available cars with details, images, and prices.
+- 📅 **Booking System** – Reserve cars with real-time availability.
+- 🔐 **Authentication** – Secure login/register using Firebase (Email/Google).
+- 📊 **User Dashboard** – Manage and track bookings.
+- 🛠 **Admin Panel** – Add, edit, or remove cars and manage all bookings.
+- 📱 **Responsive Design** – Works smoothly on mobile, tablet, and desktop.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
 
-<!-- Project Info -->
-Project Name: Car-Booking
-Purpose: Rental Car (assignment-11)
-Key Features: User Registration & Login, Car Add, update, delete etc.
-Live Link: https://car-booking-cc582.web.app/
-NPM Packages: axios, firebase, lottie-react, motion, react, react-dom, react-icons, react-router, sweetalert2 etc.
+## 🛠 Tech Stack
+
+- **React.js**
+- **Tailwind CSS** + **DaisyUI**
+- **Firebase Authentication**
+- **Node.js** + **Express.js**
+- **MongoDB Atlas**
+
+---
+
+## 📸 Screenshots
+
+![Car Booking Homepage](assets/screenshot-home.png)  
+![Booking Page](assets/screenshot-booking.png)  
+![Dashboard](assets/screenshot-dashboard.png)
