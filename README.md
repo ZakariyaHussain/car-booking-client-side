@@ -10,7 +10,6 @@ This project includes **full-stack functionality** — users can browse cars, ma
 - 🚘 **Car Listings** – View available cars with details, images, and prices.
 - 📅 **Booking System** – Reserve cars with real-time availability.
 - 🔐 **Authentication** – Secure login/register using Firebase (Email/Google).
-- 📊 **User Dashboard** – Manage and track bookings.
 - 🛠 **Admin Panel** – Add, edit, or remove cars and manage all bookings.
 - 📱 **Responsive Design** – Works smoothly on mobile, tablet, and desktop.
 
