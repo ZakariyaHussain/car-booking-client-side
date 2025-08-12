@@ -28,6 +28,6 @@ This project includes **full-stack functionality** — users can browse cars, ma
 
 ## 📸 Screenshots
 
-![Car Booking Homepage](assets/screenshot-home.png)  
+![Car Booking Homepage](assets/screencapture-car-booking.png)
 ![Booking Page](assets/screenshot-booking.png)  
 ![Dashboard](assets/screenshot-dashboard.png)
