@@ -25,13 +25,16 @@
 
 import React from 'react';
 import { Link } from 'react-router'; // ✅ Use react-router-dom
+//import bg1 from '../../assets/img/bg-3.png';
 
 const Banner = () => {
     return (
         <div
             className="hero min-h-screen bg-cover bg-center relative"
             style={{
-                backgroundImage: "url(https://i.ibb.co.com/tpxGyXnW/bg-2.png)",
+                //backgroundImage: "url(https://i.ibb.co.com/tpxGyXnW/bg-2.png)",
+                backgroundImage: "url(https://i.ibb.co.com/RpVH7sJ3/bg.png)",
+                //backgroundImage: `url(${bg1})`,
             }}
         >
             {/* Overlay for better contrast */}
