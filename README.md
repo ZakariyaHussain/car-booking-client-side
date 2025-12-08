@@ -23,6 +23,10 @@ axios, firebase, lottie-react, motion, react, react-dom, react-icons, react-rout
 - CRUD Operations
 - API Integration
 
+## 📸 Screenshots
+
+![car-booking](src/assets/img/car-booking.png)
+
 <!-- Project Info -->
 Purpose: Rental Car (assignment-11)
 
