@@ -32,7 +32,7 @@ const Register = () => {
                 });
                 
             })
-            .then(error => {
+            .catch(error => {
                 console.log(error);
             })
     }
